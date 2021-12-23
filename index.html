@@ -198,6 +198,7 @@
 <script>
   
     const setup = () => {
+      const urlParams = new URLSearchParams(queryString);
       if (urlParams.get('hl') == 'en'){
     return {
         isNavOpen: false,
