@@ -29,7 +29,8 @@
 <meta property="twitter:image" content="https://www.youtube.com/img/desktop/yt_1200.png">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="unified-ui.js"></script> 
-    <script>const urlParams = new URLSearchParams(queryString);</script>
+    <script>const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);</script>
   </head>
   <body>
  <!-- Navigation -->
@@ -198,7 +199,8 @@
 <script>
   
     const setup = () => {
-      const urlParams = new URLSearchParams(queryString);
+      const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
       if (urlParams.get('hl') == 'en'){
     return {
         isNavOpen: false,
