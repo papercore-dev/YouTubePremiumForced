@@ -29,5 +29,5 @@ xhttp.onreadystatechange =  function() {
     }
 };
    
-xhttp.open("GET", "/unified-ui.xml", true);
+xhttp.open("GET", "unified-ui.xml", true);
 xhttp.send();

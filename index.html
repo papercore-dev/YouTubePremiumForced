@@ -19,7 +19,151 @@
 
   <!-- HTML for UHF header provided by Microsoft. -->
   <div id="UHF-header"></div>
-test
+  <style>
+    [x-cloak] {
+    display: none;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+
+<div class="container mx-auto antialiased text-gray-900 bg-white py-8" x-data="setup()">
+
+  <main class="mx-4 my-16 ">
+    <div class="text-center">
+      <h1 class="mb-4 text-2xl font-normal md:text-3xl lg:text-4xl">
+       <center>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1920px-YouTube_Logo_2017.svg.png" class="h-6" alt="로고">
+</center><br>
+        YouTube의 프리 티어는<br>
+        더 이상 사용할 수 없습니다.
+      </h1>
+      <p class="font-normal text-gray-500">
+        지난 2021년 1월, YouTube의 무료 에디션 지원이 2021년 12월에 종료될 것이라고 공지했습니다.<br>
+        
+      </p>
+      <p class="text-sm font-normal text-gray-400">
+        수준 높은 크리에이터들로 이뤄진  안전한 커뮤니티를 만들기 위한 YouTube의 노력의 일환으로, 무료 사용자의 YouTube 지원을 종료하였으며, 2022년 6월부터 Premium에 등록되지 않은 크리에이터의 영상은 제거될 예정입니다.<br>
+        <br>
+        기존 데이터는 상단의 "로그인"을 눌러 Vimeo, Facebook Live로 이전할 수 있습니다.
+      </p>
+    </div>
+
+    <!-- Plan switch -->
+    <div class="flex items-center justify-center mt-10 space-x-4">
+      <span class="text-base font-medium">매월</span>
+      <button
+              class="relative rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              x-cloak
+              @click="billPlan == 'monthly' ? billPlan = 'annually' : billPlan = 'monthly'"
+              >
+        <div class="w-16 h-8 transition bg-red-500 rounded-full shadow-md outline-none"></div>
+        <div
+             class="absolute inline-flex items-center justify-center w-6 h-6 transition-all duration-200 ease-in-out transform bg-white rounded-full shadow-sm top-1 left-1"
+             :class="{ 'translate-x-0': billPlan == 'monthly', 'translate-x-8': billPlan == 'annually' }"
+             ></div>
+      </button>
+      <span class="text-base font-medium">매년 <span class="ml-2 rounded-full px-2 bg-red-500 text-white">25% 절약</span></span>
+    </div>
+
+    <!-- Plans -->
+    <div
+         class="flex flex-col items-center justify-center mt-16 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0"
+         >
+      <template x-for="(plan, i) in plans" x-key="i">
+        <section class="flex flex-col w-full max-w-sm p-12 space-y-6 bg-white rounded-lg shadow-md">
+          <!-- Price -->
+          <div class="flex-shrink-0">
+            <span
+                  class="text-4xl font-medium tracking-tight"
+                  :class="plan.name == 'Duo' ? 'font-bold' : ''"
+                  x-text="`₩${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`"
+                  ></span>
+            <span class="text-gray-400" x-text="billPlan == 'monthly' ? '/개월' : '/년'"></span>
+          </div>
+
+          <!--  -->
+          <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+            <h2 class="text-2xl font-normal" x-text="plan.name"></h2>
+            <p class="text-sm text-gray-400" x-text="plan.discretion"></p>
+          </div>
+
+          <!-- Features -->
+          <ul class="flex-1 space-y-4">
+            <template x-for="(feature, i) in plan.features" x-key="i">
+              <li class="flex items-start">
+                <svg
+                     class="w-6 h-6 text-blue-500"
+                     aria-hidden="true"
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 20 20"
+                     fill="currentColor"
+                     >
+                  <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                        />
+                </svg>
+                <span class="ml-3 text-base font-medium" x-text="feature"></span>
+              </li>
+            </template>
+          </ul>
+
+          <!-- Button -->
+          <div class="flex-shrink-0 pt-4">
+            <button
+                    class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 transition-colors border rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    :class="plan.name == 'Duo' ? 'bg-blue-500 text-white hover:bg-blue-700' : 'hover:bg-blue-500 hover:text-white'"
+                    x-text="`${plan.name} 요금제 선택`"
+                    ></button>
+          </div>
+        </section>
+      </template>
+    </div>
+  </main>
+
+</div>
+
+<script>
+    const setup = () => {
+    return {
+        isNavOpen: false,
+
+        billPlan: 'monthly',
+
+        plans: [
+        {
+            name: 'Basic',
+            discretion: 'YouTube의 기본적인 기능을 이용할 수 있습니다.',
+            price: {
+            monthly: 9500,
+            annually: 9500 * 12 - 28500,
+            },
+            features: ['광고 없는 영상 시청', '720p 스트리밍', '최대 3개의 기기에서 동시 시청'],
+        },
+        {
+            name: 'Duo',
+            discretion: '영상을 제작하고, 더 많은 시청자와 소통',
+            price: {
+            monthly: 12800,
+            annually: 12800 * 12 - 38400,
+            },
+            features: ['Basic의 기능 전부', '1080p60 스트리밍', '오프라인 저장', '100GB 동영상 업로드', '백그라운드 재생'],
+        },
+        {
+            name: 'Max',
+            discretion: 'YouTube의 모든 기능을 사용',
+            price: {
+            monthly: 24000,
+            annually: 139 * 12 - 100,
+            },
+            features: ['Duo의 기능 전부', '2560p120 스트리밍', '15TB 동영상 업로드', '1:1 채팅 지원'],
+        },
+        ],
+    }
+}
+</script>
     <!-- UHF Footer from Microsoft -->
     <div id="UHF-footer">
     </div>

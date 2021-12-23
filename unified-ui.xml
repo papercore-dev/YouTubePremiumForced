@@ -21,7 +21,8 @@
       </button>
     </div>
     <nav :class="{'flex': open, 'hidden': !open}" class="hidden flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-      <a class="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">YouTube Premium 구독</a>
+      <a class="px-2 py-2 mt-2 text-sm bg-transparent rounded-lg text-blue-500 md:mt-0 md:ml-4" href="index.html">로그인</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-blue-500 text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">1개월 무료 체험</a>
       </nav>
   </div>
 </div>
@@ -33,11 +34,11 @@
     <div class="w-full pt-12 flex flex-col sm:flex-row space-y-2 justify-start">
       <div class="w-full sm:w-2/5 pr-6 flex flex-col space-y-4">
         <h2 class="text-2xl font-bold"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/YouTube_light_logo_%282017%29.svg/1920px-YouTube_light_logo_%282017%29.svg.png" class="h-8" alt="YouTube 로고"></h2>
-        <p class="opacity-60">This page is neither endorced nor operated by Google and its subsidiaries.<br>Do not share your personal information!</p>
+        <p class="opacity-60">Never gonna give you up.</p>
       </div>
     </div>
     <div class="opacity-60 pt-2">
-      <p>소스코드 - https://github.com/papercore-dev/YouTubePremiumForced</p>
+      <p>Copyright &copy; 2021 YouTube</p>
     </div>
   </div>
 </div> ]]>
