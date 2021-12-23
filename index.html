@@ -195,8 +195,9 @@
 
 </script>
 <script>
-  if (urlParams.get('hl') == 'en'){
+  
     const setup = () => {
+      if (urlParams.get('hl') == 'en'){
     return {
         isNavOpen: false,
 
@@ -233,9 +234,8 @@
         ],
     }
 }
-  }
+ 
   else{
-    const setup = () => {
     return {
         isNavOpen: false,
 
