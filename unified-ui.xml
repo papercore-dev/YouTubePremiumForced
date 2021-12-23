@@ -1,6 +1,9 @@
 <shell>
 <cssIncludes>
-<![CDATA[ <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> ]]>
+<![CDATA[ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ <style>*{font-family: 'Roboto', sans-serif!important;}</style>]]>
 </cssIncludes>
 <javascriptIncludes>
 <![CDATA[ <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" defer></script> ]]>
