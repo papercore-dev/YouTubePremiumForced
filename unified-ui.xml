@@ -21,8 +21,8 @@
       </button>
     </div>
     <nav :class="{'flex': open, 'hidden': !open}" class="hidden flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-      <a class="px-2 py-2 mt-2 text-sm bg-transparent rounded-lg text-blue-500 md:mt-0 md:ml-4" href="index.html">로그인</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-blue-500 text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">1개월 무료 체험</a>
+      <a class="px-2 py-2 mt-2 text-sm bg-transparent rounded-lg text-blue-500 md:mt-0 md:ml-4" href="https://accounts.google.com/signin/v2/identifier?service=youtube&uilel=3&passive=true&continue=https://docs.google.com/forms/d/e/1FAIpQLSdWUB2bXKtSzv_PXY8xKbaEiiFdiezS2772Ak1Ke2RATF1cNA/viewform?usp=sf_link&ec=65620&flowName=GlifWebSignIn&flowEntry=ServiceLogin">로그인</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-blue-500 text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="https://accounts.google.com/signin/v2/identifier?service=youtube&uilel=3&passive=true&continue=https://docs.google.com/forms/d/e/1FAIpQLSdWUB2bXKtSzv_PXY8xKbaEiiFdiezS2772Ak1Ke2RATF1cNA/viewform?usp=sf_link&ec=65620&flowName=GlifWebSignIn&flowEntry=ServiceLogin">1개월 무료 체험</a>
       </nav>
   </div>
 </div>
