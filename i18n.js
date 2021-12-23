@@ -152,7 +152,7 @@
 }).apply(window);
 
 $( document ).ready( function () {
-
+	const urlParams = new URLSearchParams(queryString);
 	var i18n = new I18n();
 	i18n.localize();
 	if (urlParams.get('hl') == 'en'){
