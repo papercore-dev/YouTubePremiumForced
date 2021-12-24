@@ -37,7 +37,7 @@
     <div class="w-full pt-12 flex flex-col sm:flex-row space-y-2 justify-start">
       <div class="w-full sm:w-2/5 pr-6 flex flex-col space-y-4">
         <h2 class="text-2xl font-bold"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/YouTube_light_logo_%282017%29.svg/1920px-YouTube_light_logo_%282017%29.svg.png" class="h-8" alt="YouTube 로고"></h2>
-        <p class="opacity-60">Never gonna give you up.</p>
+        <p class="opacity-60">This webpage is not endorsed by Google</p>
       </div>
     </div>
     <div class="opacity-60 pt-2">
